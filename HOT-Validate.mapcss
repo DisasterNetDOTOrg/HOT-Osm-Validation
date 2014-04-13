@@ -3,7 +3,7 @@ meta
 	title: "HOT-Validate";
 	description: "This Style is designed for HOT Validators for use in JOSM. it shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style";
 	author: "MarkCupitt";
-	version: "1.0.0_2014-04-12";
+	version: "1.0.1_2014-04-13";
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
 }
 
@@ -27,7 +27,7 @@ area:closed
 
 *::*
 {
-	text-halo-color: white;
+	text-halo-color: grey;
 	text-anchor-horizontal: center;
 	text-anchor-vertical: center;
 }
@@ -114,7 +114,7 @@ node
 	
 }
 
-node|:connection
+node:connection
 {
 	symbol-shape: circle;
 	symbol-size: 4;
