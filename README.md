@@ -5,7 +5,7 @@ Mapcss Style to use for Task Validation in HOT TAsks Manager. Specifically desig
 
 This Style was based on the HOT HDM Style and the Surface Data Entry Style from AndrewBuck
 
-version: "1.0.8_2012-08-13" Introduces a Red Triangle for the Ways Terminates on Area Error
+version: "1.0.8_2012-08-13" Introduces a Red Triangle for the JOSM Validation Ways Terminates on Area Error
 plus some minor Style Changes
 
 
