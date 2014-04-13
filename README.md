@@ -22,6 +22,8 @@ version: "1.0.13_2014-04-13"; Removed Green Intersects n Buildings, removed Node
 
 version: "1.0.14_2014-04-134"; Added Surface Indications as dashed lines either side of Ways. Red means NO Surface Specified, Brown means some type of Unpaved/Dirt Road, Black Means some type of Paved/Surfaced Road
 
+version: "1.0.15_2014-04-14"; Fixed Bug in Track and Path
+
 =============================================================================================
 Credits
 =============================================================================================
