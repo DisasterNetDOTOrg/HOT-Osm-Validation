@@ -3,7 +3,7 @@ meta
 	title: "HOT-Validate";
 	description: "This Style is designed for HOT Validators for use in JOSM. it shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style";
 	author: "MarkCupitt";
-	version: "1.0.1_2014-04-13";
+	version: "1.0.9_2014-04-13";
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
 }
 
@@ -14,9 +14,11 @@ meta
 
 canvas {
     background-color: #f7f6f1;
+	default-points: false;
+	default-lines: false;
 }
 node, area {
-    text-color: black;
+    text-color: white;
 }
 
 area:closed
@@ -27,7 +29,7 @@ area:closed
 
 *::*
 {
-	text-halo-color: grey;
+	text-halo-color: black;
 	text-anchor-horizontal: center;
 	text-anchor-vertical: center;
 }
@@ -117,13 +119,13 @@ node
 node:connection
 {
 	symbol-shape: circle;
-	symbol-size: 4;
+	symbol-size: 15;
 
-	symbol-fill-color: grey;
-	symbol-fill-opacity: 0.3;
+	symbol-fill-color: lime;
+	symbol-fill-opacity: 0.7;
 
-	symbol-stroke-color: black;
-	symbol-stroke-opacity: 0.3;
+	symbol-stroke-color: lime;
+	symbol-stroke-opacity: 1.0;
 }
 
 
@@ -213,7 +215,7 @@ way[highway=path] {
           Surface Smoothness 
 --------------------------------------------------------*/
 
-way[surface=~/paved|asphalt|cobblestone|cobblestone:flattened|concrete|concrete:lanes|concrete:plates|paving_stones|paving_stones/]
+way[surface=~/paved|asphalt|cobblestone|cobblestone:flattened|concrete|concrete:lanes|concrete:plates|paving_stones|paving_stones:.*/]
 {
 	fill-opacity: 0.3;
 	left-casing-color: black;
@@ -657,7 +659,7 @@ node|z16-[name], node|z16-[operator], node|z16-[brand], node|z-16[capacity] {
     font-family: Open Sans;
     font-size: 9; 
     text: auto;
-    text-halo-color: white; 
+    text-halo-color: black; 
     text-halo-radius: 1.5;
 }
 node|z18-[name], node|z18-[operator], node|z18-[brand], node|z18-[capacity] {
@@ -673,7 +675,7 @@ node[place] {
     icon-image: "icons/place.png";
     font-family: Open Sans;
     text: auto;
-    text-halo-color: white;
+    text-halo-color: black;
     text-halo-radius: 2;
     font-size: 10;
     font-weight: bold;
@@ -1245,7 +1247,7 @@ node|z-16[addr:housenumber] {
    text: eval("");  
 }
 node|z17-[addr:housenumber] {
-    symbol-shape: circle;
+    symbol-shape: octagon;
     symbol-size: eval((min(length(tag("addr:housenumber")), 3) * 5) + 4);
     symbol-fill-color: white;
     text: "addr:housenumber";
@@ -1255,7 +1257,7 @@ node|z17-[addr:housenumber] {
 }
 node|z17-[addr:housenumber]::hn_casing {
     z-index: -100;
-    symbol-shape: circle;
+    symbol-shape: octagon;
     symbol-size: eval((min(length(tag("addr:housenumber")), 3) * 5) + 8);
     symbol-fill-color: black;
 }
@@ -1624,7 +1626,7 @@ area[eval(prop(small_area))]:closed {
     text-color: black;
     font-size: 10;
     text: name;
-    text-halo-color: white;
+    text-halo-color: black;
     text-halo-radius: 2;
     text-position: center;
 }
