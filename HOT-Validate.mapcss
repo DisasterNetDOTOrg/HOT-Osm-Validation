@@ -87,6 +87,11 @@ way[highway] {
 	color: red;
 
 }
+way[surface] {
+	fill-opacity: 1.0;	
+	color: red;
+	width: 7;
+}
 
 
 /*==============================================================================================================================
@@ -206,10 +211,6 @@ way[highway=path] {
 /* -------------------------------------------------------
           Surface Smoothness 
 --------------------------------------------------------*/
-/* Default, for values "unpaved" */
-way[surface] {
-	fill-opacity: 0.3;	
-}
 
 way[surface=~/paved|asphalt|cobblestone|cobblestone:flattened|concrete|concrete:lanes|concrete:plates|paving_stones|paving_stones/]
 {
