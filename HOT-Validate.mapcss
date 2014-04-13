@@ -145,11 +145,7 @@ way[highway] {
 	color: red;
 
 }
-way[surface] {
-	fill-opacity: 1.0;	
-	color: red;
-	width: 7;
-}
+
 
 
 /*==============================================================================================================================
@@ -177,14 +173,18 @@ way[highway=residential],way[highway=unclassified] {
     linecap: round;
     casing-linecap: round;
 	opacity: 0.3;
+	left-casing-width: 2;
+	right-casing-width: 2;
+	left-casing-offset: 4;
+	right-casing-offset: 4;	
 }
 
 
 way[highway=primary],way[highway=primary_link] {
     z-index: 9;
-    casing-width: 1;
 	width: 7;
     casing-color: blue;
+    casing-width: 1;
 	color: lavender;
 	opacity: 0.3;	
 }
@@ -192,7 +192,7 @@ way[highway=secondary],way[highway=secondary_link] {
     z-index: 7;
     width: 5;
     casing-color: lime;
-    casing-width: 1;
+    casing-width: 1;	
 	color: gray;
 	opacity: 0.3;	
 }
@@ -215,58 +215,75 @@ way[highway=unclassified]{
 
 }
 way[highway=residential] {
-    z-index: 5;
+    z-index: 6;
     width: 4;
     casing-color: cyan;
 	color: gray;
-    casing-width: 2;
+    casing-width: 1;
 	opacity: 0.3;
 }
 
 way[highway=track] {
-    z-index: 5;
-    color: brown;
-    width: 2;
-    dashes: 4, 2;
-    prop_path : 1;
-	opacity: 0.3;	
+    z-index: 6;
+    width: 3;
+    casing-color: chocolate;
+	color: chocolate;
+    casing-width: 1;
+	opacity: 0.3;
 }
+
 way[highway=path] {
-    z-index: 5;
-    color: #brown;
-    width: 2;
-    dashes: 2, 2;
-    prop_path : 1;
+    z-index: 6;
+    width: 3;
+    casing-color: tan;
+	color: tan;
+    casing-width: 1;
 	opacity: 0.3;
 }
 
 /* -------------------------------------------------------
-          Surface Smoothness 
+          Surface Texture and Smoothness 
 --------------------------------------------------------*/
+way[!surface][highway] {
 
-way[surface=~/paved|asphalt|cobblestone|cobblestone:flattened|concrete|concrete:lanes|concrete:plates|paving_stones|paving_stones:.*/]
-{
-	fill-opacity: 0.3;
-	left-casing-color: black;
-	right-casing-color: black;
-	
-}
-way[surface=~/unpaved|artificial_turf|clay|compacted|dirt|earth|fine_gravel|grass|grass_paver|gravel|ground|metal|mud|pebblestone|sand|wood/]
-{
-	left-casing-color: black;
-	right-casing-color: black;
-	fill-opacity: 0.3;
-	left-casing-dashes: 5, 15;
-	right-casing-dashes: 5, 15;
+    z-index: 4;
+	left-casing-dashes: 5, 5;
+	right-casing-dashes: 5, 5;
+    left-casing-color: red;
+    right-casing-color: red;
 }
 
+way[surface=~/paved|asphalt|cobblestone|cobblestone:flattened|concrete|concrete:lanes|concrete:plates|paving_stones|paving_stones/][highway]
+{
+    z-index: 4;
+	left-casing-dashes: 5, 5;
+	right-casing-dashes: 5, 5;
+    left-casing-color: black;
+    right-casing-color: black;
+
+}
+way[surface=~/unpaved|artificial_turf|clay|compacted|dirt|earth|fine_gravel|grass|grass_paver|gravel|ground|metal|mud|pebblestone|sand|wood/][highway]
+{
+    z-index: 4;
+	left-casing-dashes: 5, 5;
+	right-casing-dashes: 5, 5;
+    left-casing-color: chocolate;
+    right-casing-color: chocolate;
+
+}
+
+/*
 way[smoothness=~/intermediate|good|excellent/] {
-    casing-dashes: 5,5;
+    z-index: 4;
+	left-casing-color: blue;
+	right-casing-color: blue;	
 }
 way[smoothness=~/bad|very_bad|horrible|very_horrible|impassable/] {
-    casing-dashes: 5,10;
+    z-index: 4;
+	left-casing-color: grey;
+	right-casing-color: grey;	
 }
-
+*/
 
 
 /* -------------------------------------------------------
