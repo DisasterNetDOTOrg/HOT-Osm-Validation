@@ -1,38 +1,30 @@
 meta
 {
 	title: "HOT-Validate";
-	description: "This Style is designed for HOT Validators for use in JOSM. It shows the allowed tags in a Sparse Population Area, and highlights in RED any tags that have been used and are not contained in the Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. it was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style";
+	description: "This Style is designed for HOT Validators for use in JOSM. 
+	It shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the 
+	Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. 
+	This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style";
 	author: "MarkCupitt";
 	version: "1.0.0_2014-04-12";
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
 }
 
-/*==============================================================================================================================
-           Andrew's Stuff
-==============================================================================================================================*/
 
 /* -------------------------------------------------------
           General Things
 --------------------------------------------------------*/
 
-canvas
-{
-	background-color: #000;
-	default-lines: true;
-	default-points: false;
+canvas {
+    background-color: #f7f6f1;
 }
-
-way::*
-{
-	width: 2;
-	major-z-index: 3.0;
-	linejoin: miter;
-	linecap: none;
+node, area {
+    text-color: black;
 }
 
 area:closed
 {
-	fill-opacity: 0.5;
+	fill-opacity: 0.3;
 }
 
 
@@ -42,101 +34,6 @@ area:closed
 	text-anchor-horizontal: center;
 	text-anchor-vertical: center;
 }
-
-
-
-
-/* -------------------------------------------------------
-          High Zoom
---------------------------------------------------------*/
-node|z16-
-{
-	symbol-shape: circle;
-	symbol-size: 4;
-
-	symbol-fill-color: turquoise;
-	symbol-fill-opacity: 0.75;
-
-	symbol-stroke-color: black;
-}
-
-node|z16-:connection
-{
-	symbol-shape: circle;
-	symbol-size: 7;
-
-	symbol-fill-color: yellow;
-	symbol-fill-opacity: 1.0;
-
-	symbol-stroke-color: black;
-}
-
-way|z16-["highway"]
-{
-	width: 0.1;
-	major-z-index: 3.5;
-
-	left-casing-width: 2;
-	right-casing-width: 2;
-
-	left-casing-offset: 4;
-	right-casing-offset: 4;
-}
-
-way|z16-[highway][!surface]
-{
-	left-casing-color: yellow;
-	right-casing-color: yellow;
-
-	left-casing-dashes: 8, 24;
-	right-casing-dashes: 8, 24;
-}
-
-way|z16-[highway][surface=~/paved|asphalt|cobblestone|cobblestone:flattened|concrete|concrete:lanes|concrete:plates|paving_stones|paving_stones:.*/]
-{
-	left-casing-color: lime;
-	right-casing-color: lime;
-}
-
-way|z16-[highway][surface=~/unpaved|artificial_turf|clay|compacted|dirt|earth|fine_gravel|grass|grass_paver|gravel|ground|metal|mud|pebblestone|sand|wood/]
-{
-	left-casing-color: lime;
-	right-casing-color: lime;
-
-	left-casing-dashes: 5, 15;
-	right-casing-dashes: 5, 15;
-}
-
-
-/* -------------------------------------------------------
-          Low Zoom
---------------------------------------------------------*/
-way|z-15[highway]
-{
-	width: 2;
-	major-z-index: 3.5;
-}
-
-way|z-15[highway][!surface]
-{
-	color: yellow;
-}
-
-way|z-15[highway][surface=~/paved|asphalt|cobblestone|cobblestone:flattened|concrete|concrete:lanes|concrete:plates|paving_stones|paving_stones:.*/]
-{
-	color: lime;
-}
-
-way|z-15[highway][surface=~/unpaved|artificial_turf|clay|compacted|dirt|earth|fine_gravel|grass|grass_paver|gravel|ground|metal|mud|pebblestone|sand|wood/]
-{
-	color: lime;
-	dashes: 5, 15;
-}
-
-
-
-
-
 
 
 
@@ -172,236 +69,176 @@ relation[restriction=only_straight_on] {
 
 
 
+/* -------------------------------------------------------
+      Roads Tags Not Used - these will highlight in Red
+--------------------------------------------------------*/
+way[highway] {
+    z-index: 5;
+    text: auto;
+    text-color: red;
+    font-size: 12;
+    text-position: line;
+    text-halo-color: red;
+    text-halo-radius: 2;
+    linecap: round;
+    casing-linecap: round;
+	opacity: 1.0;	
 
+	casing-width: 3;
+	width: 7;
+    casing-color: red;
+	color: red;
 
- 
+}
 
 
 /*==============================================================================================================================
-           CORE WAYS
+           CORE WAYS HOT Validation
 ==============================================================================================================================*/
 
 /* -------------------------------------------------------
-          Roads 
+          Nodes Display Muted
+--------------------------------------------------------*/
+node
+{
+	symbol-shape: square;
+	symbol-size: 4;
+
+	symbol-fill-color: grey;
+	symbol-fill-opacity: 0.3;
+
+	symbol-stroke-color: black;
+	symbol-stroke-opacity: 0.3;
+	
+}
+
+node|:connection
+{
+	symbol-shape: circle;
+	symbol-size: 4;
+
+	symbol-fill-color: grey;
+	symbol-fill-opacity: 0.3;
+
+	symbol-stroke-color: black;
+	symbol-stroke-opacity: 0.3;
+}
+
+
+/* -------------------------------------------------------
+          Roads Tags Allowed Display Muted
 --------------------------------------------------------*/
 
-
-way[highway=motorway],way[highway=motorway_link],
-way[highway=trunk],way[highway=trunk_link],
 way[highway=primary],way[highway=primary_link],
 way[highway=secondary],way[highway=secondary_link],
 way[highway=tertiary],way[highway=tertiary_link],
 way[highway=residential],way[highway=unclassified] {
     z-index: 5;
     text: auto;
-    text-color: black;
+    text-color: white;
     font-size: 12;
     text-position: line;
-    text-halo-color: white;
+    text-halo-color: black;
     text-halo-radius: 2;
     linecap: round;
     casing-linecap: round;
+	opacity: 0.3;
 }
-way[highway=trunk],way[highway=trunk_link],
-way[highway=motorway],way[highway=motorway_link],
+
+
 way[highway=primary],way[highway=primary_link] {
     z-index: 9;
-    casing-width: 3;
-}
-way[highway=trunk],way[highway=trunk_link] {
-    width: 9;
-    casing-color: #7FC97F;
-}
-way[highway=motorway],way[highway=motorway_link] {
-    width: 8;
-    casing-color: #809BC0;
-}
-way[highway=primary],way[highway=primary_link] {
-    width: 7;
-    casing-color: #E46D71;
+    casing-width: 1;
+	width: 7;
+    casing-color: blue;
+	color: lavender;
+	opacity: 0.3;	
 }
 way[highway=secondary],way[highway=secondary_link] {
     z-index: 7;
-    width: 7;
-    casing-color: #FDBF6F;
-    casing-width: 2;
+    width: 5;
+    casing-color: lime;
+    casing-width: 1;
+	color: gray;
+	opacity: 0.3;	
 }
 way[highway=tertiary], way[highway=tertiary_link]
 {
     z-index: 6;
-    width: 5;
-    casing-color: #E5E581;
-    casing-width: 2;
+    width: 3;
+    casing-color: yellow;
+    casing-width: 1;
+	color: gray;
+	opacity: 0.3;
 }
 way[highway=unclassified]{
     z-index: 6;
-    width: 5;
-    casing-color: #D0D0D0;
-    casing-width: 2;
+    width: 3;
+    casing-color: orange;
+	color: gray;
+    casing-width: 1;
+	opacity: 0.3;
+
 }
 way[highway=residential] {
     z-index: 5;
     width: 4;
-    casing-color: #DAA529;
+    casing-color: purple;
+	color: gray;
     casing-width: 2;
-}
-way[narrow=yes],
-way[highway=service] {
-    z-index: 3;
-    width: 3;
-    casing-color: #888;
-    casing-width: 1;
-}
-way[highway=service] {
-    casing-color: white;
-}
-/*way[highway=service][service!=parking_aisle] {*/
-    /*z-index: 5;
-    color: white;
-    width: 3;
-    casing-color: gray;
-    casing-width: 1;
-}*/
-way[highway=service][service=parking_aisle] {
-    z-index: 5;
-    width: 1;
-    casing-color: #aaaaaa;
-    casing-width: 1;
-}
-way[highway=service][service=alley] {
-    z-index: 5;
-    width: 2;
-    dashes: 6,2;
-    casing-color: black;
-    casing-width: 1;
-}
-way[highway=road] {
-    z-index: 5;
-    width: 5;
-    casing-color: white;
-    casing-width: 1;
-}
-way[highway=living_street] {
-    z-index: 5;
-    width: 3;
-    casing-color: #555555;
-    casing-width: 1;
+	opacity: 0.3;
 }
 
-/* Surface/Smoothness */
-/* Default, for values "unpaved" */
-way[surface] {
-    color: #c0a56e;
-}
-way[surface=paved],
-way[surface=asphalt],
-way[surface=paving_stones],
-way[highway=trunk],way[highway=trunk_link],
-way[highway=motorway],way[highway=motorway_link] {
-    color: #d4d4d4;
-}
-way[smoothness=intermediate] {
-    casing-dashes: 5,5;
-}
-way[smoothness=bad] {
-    casing-dashes: 5,10;
-}
-
-/* -------------------------------------------------------
-          Road Areas 
---------------------------------------------------------*/
-
-way[highway=pedestrian]!:closed {
-    z-index: 5;
-    color: #ddddee;
-    width: 5;
-    casing-color: #555555;
-    casing-width: 1;
-    casing-dashes: 2,4;
-}
-area[highway=pedestrian]:closed {
-    color: #555555;
-    width: 1;
-    fill-color: #ddddee;
-    fill-opacity: 0.8;
-}
-
-/* Paths */
-
-way[highway=steps] {
-    z-index: 5;
-    color: #FF6644;
-    width: 6;
-    dashes: 2, 2;
-}
-way[highway=footway] {
-    z-index: 5;
-    color: #c3c3c3;
-    width: 2;
-    dashes: 6, 3;
-    prop_path : 1;
-}
-way[highway=footway][bicycle=yes]::bike {
-    z-index: 4;
-    color: blue;
-    width: 1;
-}
-way[highway=bridleway] {
-    z-index:9;
-    color: #996644;
-    width: 2;
-    dashes: 4, 2, 2, 2;
-    prop_path : 1;
-}
 way[highway=track] {
     z-index: 5;
-    color: #996644;
+    color: brown;
     width: 2;
     dashes: 4, 2;
     prop_path : 1;
+	opacity: 0.3;	
 }
 way[highway=path] {
     z-index: 5;
-    color: #c0a56e;
+    color: #brown;
     width: 2;
     dashes: 2, 2;
     prop_path : 1;
-}
-way[highway=cycleway] {
-    z-index: 5;
-    color: blue;
-    width: 2;
-    dashes: 4, 2;
-    prop_path : 1;
-}
-way[is_prop_set("prop_path")] {
-    z-index: 5;
-    text: auto;
-    text-color: black;
-    text-position: line;
-    text-offset: 7;
-    font-size: 12;
+	opacity: 0.3;
 }
 
 /* -------------------------------------------------------
-          Under Construction 
+          Surface Smoothness 
 --------------------------------------------------------*/
+/* Default, for values "unpaved" */
+way[surface] {
+	fill-opacity: 0.3;	
+}
 
-way[highway=proposed] {
-    z-index: 5;
-    color: #88ffff;
-    width: 6;
-    dashes: 8, 4;
+way[surface=~/paved|asphalt|cobblestone|cobblestone:flattened|concrete|concrete:lanes|concrete:plates|paving_stones|paving_stones/]
+{
+	fill-opacity: 0.3;
+	left-casing-color: black;
+	right-casing-color: black;
+	
 }
-way[highway=construction] {
-    z-index: 5;
-    color: #ffffbb;
-    width: 6;
-    dashes: 8, 4;
-    casing-color: #0000aa;
-    casing-width: 1;
-    casing-dashes: 8,4;
+way[surface=~/unpaved|artificial_turf|clay|compacted|dirt|earth|fine_gravel|grass|grass_paver|gravel|ground|metal|mud|pebblestone|sand|wood/]
+{
+	left-casing-color: black;
+	right-casing-color: black;
+	fill-opacity: 0.3;
+	left-casing-dashes: 5, 15;
+	right-casing-dashes: 5, 15;
 }
+
+way[smoothness=~/intermediate|good|excellent/] {
+    casing-dashes: 5,5;
+}
+way[smoothness=~/bad|very_bad|horrible|very_horrible|impassable/] {
+    casing-dashes: 5,10;
+}
+
+
+
 
 /* -------------------------------------------------------
           Railways
@@ -582,7 +419,7 @@ way|z-15[aeroway=aerodrome]:closed
  {
     z-index: 3;
     fill-color: #bb99bb;
-     fill-opacity: 0.5;}
+     fill-opacity: 0.3;}
 way[aeroway=taxiway]!:closed {
     z-index: 8;
     color: #999999;
@@ -673,7 +510,7 @@ area[aeroway=apron]:closed {
     color: #cc66cc;
     width: 1;
     fill-color: #ddaadd;
-    fill-opacity: 0.5;
+    fill-opacity: 0.3;
 }
 
 /* -------------------------------------------------------
@@ -1464,10 +1301,10 @@ area[landuse]:closed {
     small_area : true;
 }
 area[landuse=residential]:closed {
-    color: #EB6D69;
+    color: brown;
     width: 2;
-    fill-color: #eeece1;
-    fill-opacity: 0.05;
+    fill-color: thistle;
+    fill-opacity: 0.5;
 }
 area[landuse=retail]:closed {
     color: #cc2222;
