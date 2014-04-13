@@ -3,7 +3,7 @@ meta
 	title: "HOT-Validate";
 	description: "This Style is designed for HOT Validators for use in JOSM. it shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style";
 	author: "MarkCupitt";
-	version: "1.0.9_2014-04-13";
+	version: "1.0.11_2014-04-13";
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
 }
 
@@ -66,6 +66,45 @@ relation[restriction=only_straight_on] {
     icon-image: "vehicle/restriction/turn_restrictions/only_straight_on.png";
 }
 
+/* -------------------------------------------------------
+          Nodes Display Muted
+--------------------------------------------------------*/
+node
+{
+	symbol-shape: square;
+	symbol-size: 4;
+
+	symbol-fill-color: grey;
+	symbol-fill-opacity: 0.3;
+
+	symbol-stroke-color: black;
+	symbol-stroke-opacity: 0.3;
+	
+}
+
+node:connection
+{
+	symbol-shape: circle;
+	symbol-size: 15;
+
+	symbol-fill-color: lime;
+	symbol-fill-opacity: 0.7;
+
+	symbol-stroke-color: lime;
+	symbol-stroke-opacity: 1.0;
+}
+
+node:unconnected
+{
+	symbol-shape: pentagon;
+	symbol-size: 25;
+
+	symbol-fill-color: red;
+	symbol-fill-opacity: 0.7;
+
+	symbol-stroke-color: red;
+	symbol-stroke-opacity: 1.0;
+}
 
 
 /* -------------------------------------------------------
@@ -100,33 +139,6 @@ way[surface] {
            CORE WAYS HOT Validation
 ==============================================================================================================================*/
 
-/* -------------------------------------------------------
-          Nodes Display Muted
---------------------------------------------------------*/
-node
-{
-	symbol-shape: square;
-	symbol-size: 4;
-
-	symbol-fill-color: grey;
-	symbol-fill-opacity: 0.3;
-
-	symbol-stroke-color: black;
-	symbol-stroke-opacity: 0.3;
-	
-}
-
-node:connection
-{
-	symbol-shape: circle;
-	symbol-size: 15;
-
-	symbol-fill-color: lime;
-	symbol-fill-opacity: 0.7;
-
-	symbol-stroke-color: lime;
-	symbol-stroke-opacity: 1.0;
-}
 
 
 
@@ -237,7 +249,6 @@ way[smoothness=~/intermediate|good|excellent/] {
 way[smoothness=~/bad|very_bad|horrible|very_horrible|impassable/] {
     casing-dashes: 5,10;
 }
-
 
 
 
@@ -1311,17 +1322,19 @@ area[landuse=residential]:closed {
 }
 
 
-
+/* -------------------------------------------------------
+      Flag any Intersects between ways and Residential
+--------------------------------------------------------*/
 area[landuse=residential]:closed > node:connection
 {
 	color: red;
     fill-color: red;
     fill-opacity: 0.7;
 	symbol-shape: triangle;
-	symbol-size: 60;
+	symbol-size: 50;
 
 	symbol-fill-color: Red;
-	symbol-fill-opacity: 0.7;
+	symbol-fill-opacity: 0.6;
 
 	symbol-stroke-color: black;
 	symbol-stroke-opacity: 0.7;
@@ -1617,10 +1630,7 @@ relation[type=route][route=foot] > way::route {
     linecap: none;
 }
 
-/*@import("stylesheets/core_ways.css");*/
-/*@import("stylesheets/core_pois.css");*/
-/*@import("stylesheets/core_landuse.css");*/
-/*@import("stylesheets/core_relations.css");*/
+
 
 area[eval(prop(small_area))]:closed {
     text-color: black;
@@ -1631,7 +1641,7 @@ area[eval(prop(small_area))]:closed {
     text-position: center;
 }
 
-/*@import("stylesheets/core_interactive.css");*/
+
 
 
 
