@@ -1,7 +1,7 @@
 HOT-Osm-Validation
 ==================
 
-Mapcss Style to use for Task Validation in HOT TAsks Manager. Specifically designed for the Spec at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa
+Mapcss Style for use in JOSM for Task Validation for Sparse Area Tasks in the HOT Task Manager. Specifically designed for the Specification proposed by Pierre at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa
 
 This Style was based on the HOT HDM Style and the Surface Data Entry Style from AndrewBuck
 
