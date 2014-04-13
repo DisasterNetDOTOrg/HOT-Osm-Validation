@@ -127,6 +127,7 @@ node:connection
 }
 
 
+
 /* -------------------------------------------------------
           Roads Tags Allowed Display Muted
 --------------------------------------------------------*/
@@ -1306,6 +1307,25 @@ area[landuse=residential]:closed {
     fill-color: thistle;
     fill-opacity: 0.5;
 }
+
+
+
+area[landuse=residential]:closed > node:connection
+{
+	color: red;
+    fill-color: red;
+    fill-opacity: 0.7;
+	symbol-shape: triangle;
+	symbol-size: 60;
+
+	symbol-fill-color: Red;
+	symbol-fill-opacity: 0.7;
+
+	symbol-stroke-color: black;
+	symbol-stroke-opacity: 0.7;
+	
+}
+
 area[landuse=retail]:closed {
     color: #cc2222;
     width: 2;
