@@ -3,7 +3,7 @@ meta
 	title: "HOT-Validate";
 	description: "This Style is designed for HOT Validators for use in JOSM. it shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style";
 	author: "MarkCupitt";
-	version: "1.0.12_2014-04-13";
+	version: "1.0.13_2014-04-13";
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
 }
 
@@ -66,13 +66,15 @@ relation[restriction=only_straight_on] {
     icon-image: "vehicle/restriction/turn_restrictions/only_straight_on.png";
 }
 
+
+
 /* -------------------------------------------------------
-          Nodes Display Muted
+        Nodes Display Zoom Level 16 and Above (Zoomed In)
 --------------------------------------------------------*/
-node
+node|z16-22
 {
 	symbol-shape: square;
-	symbol-size: 4;
+	symbol-size: 6;
 
 	symbol-fill-color: grey;
 	symbol-fill-opacity: 0.3;
@@ -82,10 +84,10 @@ node
 	
 }
 
-node:connection
+node|z12-22:connection > way[!building]
 {
 	symbol-shape: circle;
-	symbol-size: 15;
+	symbol-size: 10;
 
 	symbol-fill-color: lime;
 	symbol-fill-opacity: 0.7;
@@ -94,6 +96,21 @@ node:connection
 	symbol-stroke-opacity: 1.0;
 }
 
+way[!building] > node|z12-22:connection
+{
+	symbol-shape: circle;
+	symbol-size: 0;
+
+	symbol-fill-color: lime;
+	symbol-fill-opacity: 0.7;
+
+	symbol-stroke-color: lime;
+	symbol-stroke-opacity: 1.0;
+}
+
+/* -------------------------------------------------------
+          Any Unconnected Node
+--------------------------------------------------------*
 node:unconnected
 {
 	symbol-shape: pentagon;
@@ -1321,9 +1338,21 @@ area[landuse=residential]:closed {
     fill-opacity: 0.5;
 }
 
+/* -------------------------------------------------------
+      Buildings
+--------------------------------------------------------*/
+area[building]:closed {
+    color: #D58C8C;
+    width: 1;
+    fill-color: #D58C8C;
+    fill-opacity: 0.2;
+    small_area : true;
+}
+
 
 /* -------------------------------------------------------
       Flag any Intersects between ways and landuse
+	  , way|z12-22:connection[!building]
 --------------------------------------------------------*/
 area[landuse]:closed > node:connection
 {
@@ -1343,6 +1372,7 @@ area[landuse]:closed > node:connection
 
 /* -------------------------------------------------------
       Flag any Intersects between ways and natural
+
 --------------------------------------------------------*/
 area[natural]:closed > node:connection
 {
@@ -1359,6 +1389,9 @@ area[natural]:closed > node:connection
 	symbol-stroke-opacity: 0.7;
 	
 }
+
+
+
 area[landuse=retail]:closed {
     color: #cc2222;
     width: 2;
@@ -1407,13 +1440,7 @@ area[military]:closed {
     fill-opacity: 0.2;
     small_area : true;
 }
-area[building]:closed {
-    color: #D58C8C;
-    width: 1;
-    fill-color: #D58C8C;
-    fill-opacity: 0.2;
-    small_area : true;
-}
+
 area[natural=water]:closed,
 area[waterway][waterway!=dam]:closed {
     color: #3434ff;
