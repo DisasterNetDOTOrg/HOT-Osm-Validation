@@ -8,4 +8,7 @@ This Style was based on the HOT HDM Style and the Surface Data Entry Style from 
 version: "1.0.8_2012-08-13" Introduces a Red Triangle for the JOSM Validation Ways Terminates on Area Error
 plus some minor Style Changes
 
+version: "1.0.11_2014-04-13"; Introduces Intersects flagged by Green Circle and Nodes that are unconnected dispaly as a Red Triangle
+
+
 
