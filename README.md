@@ -20,6 +20,8 @@ version: "1.0.12_2014-04-13"; Introduces a Red triangle for any Intersects betwe
 
 version: "1.0.13_2014-04-13"; Removed Green Intersects n Buildings, removed Nodes at Zoomed Out levels to help with Clicks (Thanks AndrewBuck)
 
+version: "1.0.14_2014-04-134"; Added Surface Indications as dashed lines either side of Ways. Red means NO Surface Specified, Brown means some type of Unpaved/Dirt Road, Black Means some type of Paved/Surfaced Road
+
 =============================================================================================
 Credits
 =============================================================================================
