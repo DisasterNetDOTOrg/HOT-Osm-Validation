@@ -18,6 +18,8 @@ version: "1.0.11_2014-04-13"; Introduces Nodes that Intersect a Way shown by Gre
 
 version: "1.0.12_2014-04-13"; Introduces a Red triangle for any Intersects between natural and landuse areas and ways
 
+version: "1.0.13_2014-04-13"; Removed Green Intersects n Buildings, removed Nodes at Zoomed Out levels to help with Clicks (Thanks AndrewBuck)
+
 =============================================================================================
 Credits
 =============================================================================================
