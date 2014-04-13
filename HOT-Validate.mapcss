@@ -185,7 +185,7 @@ way[highway=unclassified]{
 way[highway=residential] {
     z-index: 5;
     width: 4;
-    casing-color: purple;
+    casing-color: cyan;
 	color: gray;
     casing-width: 2;
 	opacity: 0.3;
@@ -1301,7 +1301,7 @@ area[landuse]:closed {
 }
 
 area[landuse=residential]:closed {
-    color: brown;
+    color: lime;
     width: 2;
     fill-color: thistle;
     fill-opacity: 0.5;
