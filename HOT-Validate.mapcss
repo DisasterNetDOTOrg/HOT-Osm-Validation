@@ -7,7 +7,14 @@ meta
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
 }
 
-/* General things. */
+/*==============================================================================================================================
+           Andrew's Stuff
+==============================================================================================================================*/
+
+/* -------------------------------------------------------
+          General Things
+--------------------------------------------------------*/
+
 canvas
 {
 	background-color: #000;
@@ -39,7 +46,9 @@ area:closed
 
 
 
-/* High zoom. */
+/* -------------------------------------------------------
+          High Zoom
+--------------------------------------------------------*/
 node|z16-
 {
 	symbol-shape: circle;
@@ -99,11 +108,9 @@ way|z16-[highway][surface=~/unpaved|artificial_turf|clay|compacted|dirt|earth|fi
 }
 
 
-
-
-
-
-/* Low zoom. */
+/* -------------------------------------------------------
+          Low Zoom
+--------------------------------------------------------*/
 way|z-15[highway]
 {
 	width: 2;
@@ -126,25 +133,20 @@ way|z-15[highway][surface=~/unpaved|artificial_turf|clay|compacted|dirt|earth|fi
 	dashes: 5, 15;
 }
 
-/*
-Humanatirian Data Model, derived from Potlatch2 style.
-*/
-meta {
-    title: "HDM";
-    icon: "icons/hot_small.png";
-    description: "Humanitarian Data Model focused style.";
-    version: "0.0.1";
-    author: "HOT (Humanitarian OpenStreetMap Team)";
-    link: "https://github.com/hotosm/HDM-JOSM-style";
-    
-}
 
-canvas {
-    background-color: #f7f6f1;
-}
-node, area {
-    text-color: black;
-}
+
+
+
+
+
+
+
+
+/*==============================================================================================================================
+              RELATION RESTRICTIONS
+			  
+			  Do not have these icons yet, have to find them
+==============================================================================================================================*/
 
 relation[restriction=no_left_turn] {
     icon-image: "vehicle/restriction/turn_restrictions/no_left_turn.png";
@@ -168,11 +170,20 @@ relation[restriction=only_straight_on] {
     icon-image: "vehicle/restriction/turn_restrictions/only_straight_on.png";
 }
 
-/****************
- * core_ways.css
- ****************/
 
-/* Roads */
+
+
+
+
+
+
+/*==============================================================================================================================
+           CORE WAYS
+==============================================================================================================================*/
+
+/* -------------------------------------------------------
+          Roads 
+--------------------------------------------------------*/
 
 
 way[highway=motorway],way[highway=motorway_link],
@@ -296,7 +307,9 @@ way[smoothness=bad] {
     casing-dashes: 5,10;
 }
 
-/* Road areas */
+/* -------------------------------------------------------
+          Road Areas 
+--------------------------------------------------------*/
 
 way[highway=pedestrian]!:closed {
     z-index: 5;
@@ -370,7 +383,9 @@ way[is_prop_set("prop_path")] {
     font-size: 12;
 }
 
-/* Under construction */
+/* -------------------------------------------------------
+          Under Construction 
+--------------------------------------------------------*/
 
 way[highway=proposed] {
     z-index: 5;
@@ -388,7 +403,9 @@ way[highway=construction] {
     casing-dashes: 8,4;
 }
 
-/* Railways */
+/* -------------------------------------------------------
+          Railways
+--------------------------------------------------------*/
 
 way[railway=rail] {
     z-index: 6;
@@ -506,7 +523,9 @@ node[traffic_calming=bump] {
     z-index: 20;
 }
 
-/* Waterways */ 
+/* -------------------------------------------------------
+          Waterways 
+--------------------------------------------------------*/
 
 way[waterway=river]
  {
@@ -548,7 +567,9 @@ way[waterway][intermittent=yes]  {
     color: #1B00FD;
     opacity: 0.26; }
 
-/* Aeroways */
+/* -------------------------------------------------------
+          Aeroways 
+--------------------------------------------------------*/
 
 way[aeroway=aerodrome]:closed {
     z-index: 3;
@@ -655,7 +676,9 @@ area[aeroway=apron]:closed {
     fill-opacity: 0.5;
 }
 
-/* Barriers */
+/* -------------------------------------------------------
+          Barriers 
+--------------------------------------------------------*/
 
 way[barrier] {
     z-index: 5;
@@ -673,7 +696,9 @@ way[barrier=wall] {
     width: 2;
 }
 
-/* Power */
+/* -------------------------------------------------------
+          Power 
+--------------------------------------------------------*/
 
 way[power=line] {
     z-index: 5;
@@ -708,7 +733,9 @@ area[power=generator]:closed {
     small_area : true;
 }
 
-/* Leisure */
+/* -------------------------------------------------------
+          Leisure 
+--------------------------------------------------------*/
 
 way[golf=hole] {z-index: 5;
     color: darkgreen;
@@ -723,7 +750,9 @@ area[leisure=sports_centre]:closed {
 }
 
 
-/* Physical decoration */
+/* -------------------------------------------------------
+          Physical Decoration 
+--------------------------------------------------------*/
 
 way[bridge=yes]::bridge1, way[bridge=viaduct]::bridge1, way[bridge=suspension]::bridge1 {
     z-index: 4;
@@ -747,7 +776,9 @@ way[tunnel=yes][!waterway]::bridge2 {
     dashes: 4,4;
 }
 
-/* Attribute decoration */
+/* -------------------------------------------------------
+          Attribute Decoration 
+--------------------------------------------------------*/
 
 /*way[oneway=yes]::arrows, way[junction=roundabout]::arrows {
     z-index: 15;
@@ -764,9 +795,16 @@ way[oneway=-1]::arrows {
     line-style: arrows-reversed;
 }*/
 
-/****************
- * core_pois.css
- ****************/
+
+
+
+
+
+
+/*==============================================================================================================================
+           CORE POI's
+==============================================================================================================================*/
+
 
 node {
     text-anchor-horizontal: center;
@@ -1032,17 +1070,23 @@ node[amenity=dentist] {
     icon-image: "icons/dentist-18.png";
 }
 
-/* Places of worship */
+/* -------------------------------------------------------
+          Places of Worship 
+--------------------------------------------------------*/
 node[amenity=place_of_worship] {
     icon-image: "icons/place_of_worship-18.png";
 }
 
-/* Craft */
+/* -------------------------------------------------------
+          Craft 
+--------------------------------------------------------*/
 node[craft] {
     icon-image: "icons/craft-18.png";
 }
 
-/* Shops */
+/* -------------------------------------------------------
+          Shops 
+--------------------------------------------------------*/
 node[shop] {
     icon-image: "icons/shop-18.png";
 }
@@ -1173,7 +1217,10 @@ node[shop=toys] {
     icon-image: "icons/shopping_toys.n.16.png";
     z-index: 20;
 }
-*//* More Touristy Items */
+
+/* -------------------------------------------------------
+          Tourist 
+--------------------------------------------------------*/
 node[tourism=artwork] {
     icon-image: "icons/tourist_art_gallery2.n.16.png";
     z-index: 20;
@@ -1230,7 +1277,10 @@ node[tourism=zoo] {
     icon-image: "icons/tourist_zoo.n.16.png";
     z-index: 20;
 }
-/* Transport */
+
+/* -------------------------------------------------------
+          Transport 
+--------------------------------------------------------*/
 node[aeroway=aerodrome] {
     icon-image: "icons/transport_aerodrome.n.16.png";
     z-index: 20;
@@ -1320,6 +1370,7 @@ node[man_made=tower] {
     icon-image: "icons/manmade_tower.png";
     z-index: 20;
 }
+
 /* Yes these power stations seem a little backward - but that's seemingly what the side menu uses ATM */
 node[power=station] {
     icon-image: "icons/power_substation.n.16.png";
@@ -1346,7 +1397,12 @@ node[natural=tree] {
 }
 
 
-/* Addressing */
+
+
+
+/*==============================================================================================================================
+           ADDRESSES
+==============================================================================================================================*/
 
 node|z-16[addr:housenumber] {
    text: eval("");  
@@ -1374,56 +1430,58 @@ way[addr:interpolation] {
     dashes: 3,3;
 }
 
-/****************
- * core_landuse.css
- ****************/
+/*==============================================================================================================================
+           CORE LANDUSE
+==============================================================================================================================*/
 
-/* Landuse */
+/* -------------------------------------------------------
+          Landuse 
+--------------------------------------------------------*/
 
-area[natural]:closed                    {
+area[natural]:closed {
     color: #ADD6A5;
     width: 1;
     fill-color: #ADD6A5;
     fill-opacity: 0.2;
 }
-area[natural=beach]:closed              {
+area[natural=beach]:closed {
     color: #ffdd44;
     width: 1;
     fill-color: yellow;
     fill-opacity: 0.2;
     small_area : true;
 }
-way[natural=coastline]                      {
+way[natural=coastline] {
     z-index: 5;
     color: black;
     width: 3;
 }
-area[landuse]:closed                    {
+area[landuse]:closed {
     color: #444444;
     width: 2;
     fill-color: #444444;
     fill-opacity: 0.3;
     small_area : true;
 }
-area[landuse=residential]:closed        {
+area[landuse=residential]:closed {
     color: #EB6D69;
     width: 2;
     fill-color: #eeece1;
     fill-opacity: 0.05;
 }
-area[landuse=retail]:closed             {
+area[landuse=retail]:closed {
     color: #cc2222;
     width: 2;
     fill-color: #aa4422;
     fill-opacity: 0.15;
 }
-area[landuse=commercial]:closed         {
+area[landuse=commercial]:closed {
     color: #D5C6C9;
     width: 2;
     fill-color: #D5C6C9;
     fill-opacity: 0.15;
 }
-area[landuse=military]:closed           {
+area[landuse=military]:closed  {
     color: #ff4444;
     width: 2;
     fill-color: #ff4444;
@@ -1432,27 +1490,27 @@ area[landuse=military]:closed           {
 }
 
 /* way[sport] should not be rendered by itself, according to wiki. Can we make it an "if all else fails"? */
-area[leisure]:closed                   {
+area[leisure]:closed {
     color: #8CD6B5;
     width: 1;
     fill-color: #8CD6B5;
     fill-opacity: 0.2;
 }
-area[tourism]:closed                    {
+area[tourism]:closed {
     color: #F7CECE;
     width: 1;
     fill-color: #F7CECE;
     fill-opacity: 0.2;
     small_area : true;
 }
-area[historic]:closed, area[ruins]:closed  {
+area[historic]:closed, area[ruins]:closed {
     color: #F7F7DE;
     width: 1;
     fill-color: #F7F7DE;
     fill-opacity: 0.2;
     small_area : true;
 }
-area[military]:closed                   {
+area[military]:closed {
     color: #D6D6D6;
     width: 1;
     fill-color: #D6D6D6;
@@ -1467,14 +1525,14 @@ area[building]:closed {
     small_area : true;
 }
 area[natural=water]:closed,
-area[waterway][waterway!=dam]:closed    {
+area[waterway][waterway!=dam]:closed {
     color: #3434ff;
     width: 2;
     fill-color: #3434ff;
     fill-opacity: 0.2;
     small_area : true;
 }
-way[waterway=dam]                           {
+way[waterway=dam] {
     z-index: 5;
     color: black;
     width: 1;
@@ -1482,7 +1540,11 @@ way[waterway=dam]                           {
     fill-opacity: 0.1;
     small_area : true;
 }
-area[man_made]:closed                           {
+
+/* -------------------------------------------------------
+          Man Made 
+--------------------------------------------------------*/
+area[man_made]:closed  {
     color: black;
     width: 2;
     fill-color: #222222;
@@ -1497,7 +1559,9 @@ area[man_made=reservoir_covered]:closed {
     fill-opacity: 0.1;
     small_area : true;
 }
-area[landuse=reservoir]:closed          {
+
+
+area[landuse=reservoir]:closed {
     color: #3434ff;
     width: 2;
     fill-color: #3434ff;
@@ -1706,7 +1770,16 @@ area[eval(prop(small_area))]:closed {
 
 /*@import("stylesheets/core_interactive.css");*/
 
-/* HDM specific */
+
+
+
+
+
+/*==============================================================================================================================
+           HOT Specific
+==============================================================================================================================*/
+
+
 node[man_made=water_well] {
     icon-image: "icons/bucket-18.png";
     z-index: 20;
