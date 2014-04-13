@@ -1,10 +1,7 @@
 meta
 {
 	title: "HOT-Validate";
-	description: "This Style is designed for HOT Validators for use in JOSM. 
-	It shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the 
-	Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. 
-	This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style";
+	description: "This Style is designed for HOT Validators for use in JOSM. it shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style";
 	author: "MarkCupitt";
 	version: "1.0.0_2014-04-12";
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
@@ -646,6 +643,7 @@ way[oneway=-1]::arrows {
 node {
     text-anchor-horizontal: center;
     text-anchor-vertical: below;
+	icon-opacity: 0.5;
 }
 
 node|z-15[name], node|z-15[operator], node|z-15[brand], node|z-15[capacity] {
@@ -1300,6 +1298,7 @@ area[landuse]:closed {
     fill-opacity: 0.3;
     small_area : true;
 }
+
 area[landuse=residential]:closed {
     color: brown;
     width: 2;
@@ -1396,7 +1395,21 @@ area[man_made=reservoir_covered]:closed {
     fill-opacity: 0.1;
     small_area : true;
 }
-
+way[man_made=pier]                          {
+    z-index: 4;
+    color: #777;
+    width: 3;
+    casing-color: black;
+    casing-width: 1;
+}
+way[man_made=pier][floating=yes]            {
+    z-index: 5;
+    dashes: 4,2;
+    casing-color: #444;
+}
+/* -------------------------------------------------------
+          Land Use 
+--------------------------------------------------------*/
 
 area[landuse=reservoir]:closed {
     color: #3434ff;
@@ -1466,18 +1479,8 @@ area[public_transport=pay_scale_area]:closed {
     fill-color: gray;
     fill-opacity: 0.1;
 }
-way[man_made=pier]                          {
-    z-index: 4;
-    color: #777;
-    width: 3;
-    casing-color: black;
-    casing-width: 1;
-}
-way[man_made=pier][floating=yes]            {
-    z-index: 5;
-    dashes: 4,2;
-    casing-color: #444;
-}
+
+
 area[leisure=marina]:closed                 {
     color: pink;
     fill-color: pink;
