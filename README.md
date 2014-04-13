@@ -5,7 +5,7 @@ Mapcss Style for use in JOSM for Task Validation for Sparse Area Tasks in the HO
 
 Style is available for download direct into JOSM. It is named "HOT-Validate". 
 
-(See https://josm.openstreetmap.de/wiki/Styles for instructin on how to load the style directly into JOSM, instructions are at the bottom of the list of styles at the top of the page)
+(See https://josm.openstreetmap.de/wiki/Styles for instructions on how to load the style directly into JOSM, instructions are at the bottom of the list of styles at the top of the page)
 
 version: "1.0.8_2012-08-13" Introduces a Red Triangle for the JOSM Validation Ways Terminates on Area Error
 plus some minor Style Changes
