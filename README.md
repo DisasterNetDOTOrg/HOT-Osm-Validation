@@ -7,6 +7,9 @@ Style is available for download direct into JOSM. It is named "HOT-Validate".
 
 (See https://josm.openstreetmap.de/wiki/Styles for instructions on how to load the style directly into JOSM, instructions are at the bottom of the list of styles at the top of the page)
 
+==
+NOTE: This Style is EASY to use. Anything RED requires attention.
+
 =============================================================================================
 Change History
 =============================================================================================
