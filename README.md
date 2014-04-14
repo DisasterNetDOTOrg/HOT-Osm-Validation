@@ -9,7 +9,6 @@ Style is available for download direct into JOSM. It is named "HOT-Validate".
 
 ==
 NOTE: This Style is EASY to use. Anything RED requires attention.
-
 =============================================================================================
 Change History
 =============================================================================================
