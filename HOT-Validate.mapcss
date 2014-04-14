@@ -13,7 +13,7 @@ meta
 	title: "HOT-Validate";
 	description: "This Style is designed for HOT Validators for use in JOSM. it shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style. For Updates and more Information and Updates, please see GIT Repository at https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation";
 	author: "MarkCupitt";
-	version: "1.0.17_2014-04-14";
+	version: "1.0.18_2014-04-15";
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
 }
 
@@ -132,6 +132,7 @@ node:unconnected
 	symbol-stroke-color: red;
 	symbol-stroke-opacity: 1.0;
 }
+
 
 
 /* -------------------------------------------------------
@@ -1751,7 +1752,24 @@ node[office=government] {
     icon-image: "icons/government.png";
 }
 
-
+/* -------------------------------------------------------
+      HOT Activation Boundaries
+--------------------------------------------------------*/
+way[HOT][boundary]
+{
+	z-index: 10;
+    linecap: round;
+    casing-linecap: round;
+	opacity: 1.0;	
+	color: White;
+	width: 3;
+	left-casing-width: 2;
+	right-casing-width: 2;
+	left-casing-offset: 2;
+	right-casing-offset: 2;	
+    casing-color: grey;	
+	
+}
 
 /*==============================================================================================================================
            FIXME TAGS
