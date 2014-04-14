@@ -12,20 +12,14 @@ Style is available for download direct into JOSM. It is named "HOT-Validate".
 ***
 ### Change History
 
-version: "1.0.8_2012-08-13" Introduces a Red Triangle for the JOSM Validation Ways Terminates on Area Error
+  * version: "1.0.8_2012-08-13" Introduces a Red Triangle for the JOSM Validation Ways Terminates on Area Error
 plus some minor Style Changes
-
-version: "1.0.11_2014-04-13"; Introduces Nodes that Intersect a Way shown by Green Circle and Nodes that are unconnected to anything display as a Red Pentagon
-
-version: "1.0.12_2014-04-13"; Introduces a Red triangle for any Intersects between natural and landuse areas and ways
-
-version: "1.0.13_2014-04-13"; Removed Green Intersects n Buildings, removed Nodes at Zoomed Out levels to help with Clicks (Thanks AndrewBuck)
-
-version: "1.0.14_2014-04-134"; Added Surface Indications as dashed lines either side of Ways. Red means NO Surface Specified, Brown means some type of Unpaved/Dirt Road, Black Means some type of Paved/Surfaced Road
-
-version: "1.0.15_2014-04-14"; Fixed Bug in Track and Path
-
-version: "1.0.16_2014-04-14"; Fixme tags Added (Red Help Icon), Road Widths Reduced, Way Rubber Band shown on drawing, Res Landuce area now more transparant (Thanks Nick-TallGuy)
+  * version: "1.0.11_2014-04-13"; Introduces Nodes that Intersect a Way shown by Green Circle and Nodes that are unconnected to anything display as a Red Pentagon
+  * version: "1.0.12_2014-04-13"; Introduces a Red triangle for any Intersects between natural and landuse areas and ways
+  * version: "1.0.13_2014-04-13"; Removed Green Intersects n Buildings, removed Nodes at Zoomed Out levels to help with Clicks (Thanks AndrewBuck)
+  * version: "1.0.14_2014-04-134"; Added Surface Indications as dashed lines either side of Ways. Red means NO Surface Specified, Brown means some type of Unpaved/Dirt Road, Black Means some type of Paved/Surfaced Road
+  * version: "1.0.15_2014-04-14"; Fixed Bug in Track and Path
+  * version: "1.0.16_2014-04-14"; Fixme tags Added (Red Help Icon), Road Widths Reduced, Way Rubber Band shown on drawing, Residential Landuse area now more transparant (Thanks Nick-TallGuy)
 
 ___
 ####Credits
