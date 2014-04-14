@@ -14,14 +14,14 @@ Style is available for download direct into JOSM. It is named "HOT-Validate".
 
 | Version | Details |
 | --------| ------- |
-| `1.0.01 2014-04-11` | Commenced with Trial Versions |
-| `1.0.08 2014-04-13` | Introduces a Red Triangle for the JOSM Validation Ways Terminates on Area Error plus some minor Style Changes |
-| `1.0.11 2014-04-13` | Introduces Nodes that Intersect a Way shown by Green Circle and Nodes that are unconnected to anything display as a Red Pentagon |
-| `1.0.12 2014-04-13` | Introduces a Red triangle for any Intersects between natural and landuse areas and ways |
-| `1.0.13 2014-04-13` | Removed Green Intersects n Buildings, removed Nodes at Zoomed Out levels to help with Clicks (Thanks AndrewBuck) |
-| `1.0.14 2014-04-13` | Added Surface Indications as dashed lines either side of Ways. Red means NO Surface Specified, Brown means some type of Unpaved/Dirt Road, Black Means some type of Paved/Surfaced Road |
-| `1.0.15 2014-04-14` | Fixed Bug in Track and Path |
 | `1.0.16 2014-04-14` | Fixme tags Added (Red Help Icon), Road Widths Reduced, Way Rubber Band shown on drawing, Residential Landuse area now more transparant (Thanks Nick-TallGuy) |
+| `1.0.15 2014-04-14` | Fixed Bug in Track and Path |
+| `1.0.14 2014-04-13` | Added Surface Indications as dashed lines either side of Ways. Red means NO Surface Specified, Brown means some type of Unpaved/Dirt Road, Black Means some type of Paved/Surfaced Road |
+| `1.0.13 2014-04-13` | Removed Green Intersects n Buildings, removed Nodes at Zoomed Out levels to help with Clicks (Thanks AndrewBuck) |
+| `1.0.12 2014-04-13` | Introduces a Red triangle for any Intersects between natural and landuse areas and ways |
+| `1.0.11 2014-04-13` | Introduces Nodes that Intersect a Way shown by Green Circle and Nodes that are unconnected to anything display as a Red Pentagon |
+| `1.0.08 2014-04-13` | Introduces a Red Triangle for the JOSM Validation Ways Terminates on Area Error plus some minor Style Changes |
+| `1.0.01 2014-04-11` | Commenced with Trial Versions |
 
 
 ___
