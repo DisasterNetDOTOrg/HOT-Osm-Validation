@@ -24,6 +24,8 @@ version: "1.0.14_2014-04-134"; Added Surface Indications as dashed lines either 
 
 version: "1.0.15_2014-04-14"; Fixed Bug in Track and Path
 
+version: "1.0.16_2014-04-14"; Fixme tags Added (Red Help Icon), Road Widths Reduced, Way Rubber Band shown on drawing, Res Landuce area now more transparant (Thanks Nick-TallGuy)
+
 =============================================================================================
 Credits
 =============================================================================================
