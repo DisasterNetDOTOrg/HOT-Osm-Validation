@@ -14,6 +14,7 @@ Style is available for download direct into JOSM. It is named "HOT-Validate".
 
 | Version | Details |
 | --------| ------- |
+| `1.0.17 2014-04-14` | Added GNU Licensing |
 | `1.0.16 2014-04-14` | Fixme tags Added (Red Help Icon), Road Widths Reduced, Way Rubber Band shown on drawing, Residential Landuse area now more transparant (Thanks Nick-TallGuy) |
 | `1.0.15 2014-04-14` | Fixed Bug in Track and Path |
 | `1.0.14 2014-04-13` | Added Surface Indications as dashed lines either side of Ways. Red means NO Surface Specified, Brown means some type of Unpaved/Dirt Road, Black Means some type of Paved/Surfaced Road |
