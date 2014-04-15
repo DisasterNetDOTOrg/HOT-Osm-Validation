@@ -13,7 +13,7 @@ meta
 	title: "HOT-Validate";
 	description: "This Style is designed for HOT Validators for use in JOSM. it shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style. For Updates and more Information and Updates, please see GIT Repository at https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation";
 	author: "MarkCupitt";
-	version: "1.0.19_2014-04-15";
+	version: "1.0.20_2014-04-15";
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
 }
 
@@ -1807,8 +1807,9 @@ way[HOT][boundary]
 /*==============================================================================================================================
            FIXME TAGS
 ==============================================================================================================================*/
-way[fixme][FIXME][Fixme][FixMe]
+way[fixme],way[FIXME],way[Fixme],way[FixMe],way[FIxMe],way[FIXMe],way[FiXMe]
 {
+	z-index: 100;
     repeat-image: "icons/fixme.png";
 	repeat-image-width: 40;
 	repeat-image-height: 40;
@@ -1818,17 +1819,18 @@ way[fixme][FIXME][Fixme][FixMe]
 	repeat-image-phase: 50;
 	}
 
-node[fixme][FIXME][Fixme][FixMe]
+way[fixme],way[FIXME],way[Fixme],way[FixMe],way[FIxMe],way[FIXMe],way[FiXMe]
 {
+	z-index: 100;
     icon-image: "icons/fixme.png";
 	icon-height: 40;
 	icon-width: 40;
 	
 }
 
-relation[fixme][FIXME][Fixme][FixMe]
+way[fixme],way[FIXME],way[Fixme],way[FixMe],way[FIxMe],way[FIXMe],way[FiXMe]
 {
-    repeat-image: "icons/fixme.png";
+	z-index: 100;
     repeat-image: "icons/fixme.png";
 	repeat-image-width: 40;
 	repeat-image-height: 40;
