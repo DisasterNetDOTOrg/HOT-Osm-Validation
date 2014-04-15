@@ -12,7 +12,7 @@ Style is available for download direct into JOSM. It is named "HOT-Validate".
 ***
 ### Change History
 
-| Version | Details |
+| Version (srarted in 2014)| Details |
 | --------| ------- |
 | `1.0.19 2014-04-15` | Added support for highway=trunk and highway=motorway so they would not diosplay in red. |
 | `1.0.18 2014-04-15` | Added support ofr Activation Boundaries. Create a way (area) with tags HOT=Taskxx,boundary=yes and a White dashed line will be drawn arond the activation area. very useful for figuring out where the activation is on the map when validating |
