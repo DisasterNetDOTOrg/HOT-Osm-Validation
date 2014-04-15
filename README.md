@@ -12,9 +12,9 @@ Style is available for download direct into JOSM. It is named "HOT-Validate".
 ***
 ### Change History
 
-| Version (srarted in 2014)| Details |
-| --------| ------- |
-| `1.0.19 2014-04-15` | Added support for highway=trunk and highway=motorway so they would not diosplay in red. |
+| Version (srarted in 2014)| Details                             |
+| -------------------------| ----------------------------------- |
+| `1.0.19 2014-04-15` | Added support for highway=trunk and highway=motorway so they would not display in red (as errors). |
 | `1.0.18 2014-04-15` | Added support ofr Activation Boundaries. Create a way (area) with tags HOT=Taskxx,boundary=yes and a White dashed line will be drawn arond the activation area. very useful for figuring out where the activation is on the map when validating |
 | `1.0.17 2014-04-14` | Added GNU Licensing |
 | `1.0.16 2014-04-14` | Fixme tags Added (Red Help Icon), Road Widths Reduced, Way Rubber Band shown on drawing, Residential Landuse area now more transparant (Thanks Nick-TallGuy) |
