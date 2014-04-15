@@ -9,7 +9,7 @@ Style is available for download direct into JOSM. It is named "HOT-Validate".
 
 **NOTE: This Style is EASY to use. Anything <b><style="color: red">RED</style></b> requires attention.**
 
-** YOU CAN US ETHIS STYLE TO ACTUALL MAP THE HOT HMPS AND ACTIVATIONS. In this case, you will self validate to a degree**
+**YOU CAN USE THIS STYLE TO ACTUAL MAP THE HOT HMPS AND ACTIVATIONS. In this case, you will self validate to a degree and make the jobs of teh validators a lot easier and improve the quality of the map**
 
 ***
 ### Change History
