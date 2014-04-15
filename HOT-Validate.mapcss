@@ -13,7 +13,7 @@ meta
 	title: "HOT-Validate";
 	description: "This Style is designed for HOT Validators for use in JOSM. it shows the allowed tags in a Sparse Population Area Mapping, and highlights in RED any tags that have been used and are not contained in the Specification which is located at http://wiki.openstreetmap.org/wiki/Highway_Tag_Africa. This style was adapted form the HDM.mapcss file found at https://github.com/hotosm/HDM-JOSM-style/archive/master.zip and AndrewBuck's Surface Data Entry Style. For Updates and more Information and Updates, please see GIT Repository at https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation";
 	author: "MarkCupitt";
-	version: "1.0.18_2014-04-15";
+	version: "1.0.19_2014-04-15";
 	link: "https://github.com/DisasterNetDOTOrg/HOT-Osm-Validation/archive/master.zip";
 }
 
@@ -157,8 +157,41 @@ way[highway] {
 */
 
 }
+/* -------------------------------------------------------
+      Roads Tags to display but not relevant to HOT
+	  Just so these do not display in Red
+--------------------------------------------------------*/
+way[highway=motorway],way[highway=motorway_link],
+way[highway=trunk],way[highway=trunk_link]
+{
+    z-index: 5;
+    text: auto;
+    text-color: black;
+    font-size: 12;
+    text-position: line;
+    text-halo-color: white;
+    text-halo-radius: 2;
+    linecap: round;
+    casing-linecap: round;
+}
 
+way[highway=motorway],way[highway=motorway_link]
+{
+    z-index: 9;
+    casing-width: 3;
+	width: 8;
+    casing-color: #809BC0;
+	color: #d4d4d4;
+}	
 
+way[highway=trunk],way[highway=trunk_link]
+{
+    z-index: 9;
+    casing-width: 3;
+    width: 9;
+    casing-color: #7FC97F;	
+	color: #d4d4d4;
+}
 
 /*==============================================================================================================================
            CORE WAYS HOT Validation
@@ -188,8 +221,8 @@ way[highway=track],way[highway=path] {
 	opacity: 0.3;
 	left-casing-width: 2;
 	right-casing-width: 2;
-	left-casing-offset: 4;
-	right-casing-offset: 4;	
+	left-casing-offset: 2;
+	right-casing-offset: 2;	
 }
 
 
