@@ -11,7 +11,7 @@ You should have received a copy of the GNU General Public License along with thi
 meta
 {
 	title: "HOT-Validate";
-	description: "This Style is designed for HOT Validators for use in JOSM. For Updates and more Information and Updates, please see GIT Repository at https://github.com/MarkCupitt/HOT-Osm-Validation";
+	description: "This Style is designed for HOT Validators for use in JOSM. More Info at https://github.com/MarkCupitt/HOT-Osm-Validation";
 	author: "MarkCupitt";
 	version: "1.0.21_2014-11-24";
 
