@@ -12,7 +12,7 @@ meta
 {
 	title: "HOT-Validate";
 	description: "This Style is designed for HOT Validators for use in JOSM.";
-        link: "https://github.com/MarkCupitt/HOT-Osm-Validation";
+	link: "https://github.com/MarkCupitt/HOT-Osm-Validation";
 	author: "MarkCupitt";
 	version: "1.0.21_2014-11-24";
 
