@@ -13,7 +13,7 @@ meta
 	title: "HOT-Validate";
 	description: "This Style is designed for HOT Validators for use in JOSM. More Info at https://github.com/MarkCupitt/HOT-Osm-Validation";
 	author: "MarkCupitt";
-	version: "1.0.21_2014-11-24";
+	version: "1.0.22_2017-02-16";
 
 }
 
@@ -133,6 +133,27 @@ node:unconnected
 	symbol-stroke-opacity: 1.0;
 }
 
+
+*/
+
+/* -------------------------------------------------------
+          Any Building tag on a Node (instead of way)
+--------------------------------------------------------*/
+node[building]
+{
+    color: red;
+    fill-color: red;
+    fill-opacity: 0.7;
+    symbol-shape: octagon;
+    symbol-size: 50;
+
+    symbol-fill-color: Red;
+    symbol-fill-opacity: 0.6;
+
+    symbol-stroke-color: black;
+    symbol-stroke-opacity: 0.7;
+    icon-image: none;
+}
 
 
 /* -------------------------------------------------------
