@@ -14,7 +14,6 @@ meta
 	description: "This Style is designed for HOT Validators for use in JOSM. More Info at https://github.com/MarkCupitt/HOT-Osm-Validation";
 	author: "MarkCupitt";
 	version: "1.0.22_2017-02-16";
-
 }
 
 
@@ -137,7 +136,7 @@ node:unconnected
 */
 
 /* -------------------------------------------------------
-          Any Building tag on a Node (instead of way)
+          Any "Building" node - buildings should be ways
 --------------------------------------------------------*/
 node[building]
 {
@@ -152,7 +151,7 @@ node[building]
 
     symbol-stroke-color: black;
     symbol-stroke-opacity: 0.7;
-    icon-image: none;
+    icon-image: none; /* needed so that default styles are overridden */
 }
 
 
